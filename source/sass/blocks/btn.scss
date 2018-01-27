@@ -1,0 +1,75 @@
+$padding-vertical: 10px !default;
+$padding-horizontal: 20px !default;
+
+$font-size: 14px !default;
+$text-color: #ffffff !default;
+$text-color--gray: #444444 !default;
+
+$bg-color: #68b738 !default;
+$bg-color-hover: #5eaa2f !default;
+$bg-color--gray: #f2f2f2 !default;
+$bg-color-hover--gray: #ebebeb !default;
+
+$border-color: transparent !default;
+
+$opacity: 0.3;
+
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: $padding-vertical $padding-horizontal;
+
+  font-size: $font-size;
+  font-family: inherit;
+  vertical-align: top;
+  text-align: center;
+  color: $text-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+
+  background-color: $bg-color;
+  background-image: none;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    background-color: $bg-color-hover;
+  }
+
+  &:active {
+    color: rgba($text-color, $opacity);
+  }
+
+  &--disabled,
+  &:disabled {
+    background-color: lighten($bg-color, 50%);
+    cursor: not-allowed;
+    opacity: $opacity;
+  }
+
+  &--gray {
+    color: $text-color--gray;
+
+    background-color: $bg-color--gray;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-color-hover--gray;
+    }
+
+    &:active {
+      color: rgba($text-color--gray, $opacity);
+    }
+  }
+}
