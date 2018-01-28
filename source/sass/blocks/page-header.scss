@@ -1,0 +1,17 @@
+@media (min-width: $tablet-width) {
+  .page-header__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    width: 1300px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}

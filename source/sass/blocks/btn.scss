@@ -2,10 +2,11 @@ $padding-vertical: 10px !default;
 $padding-horizontal: 20px !default;
 
 $font-size: 14px !default;
+$line-height: 18px !default;
 $text-color: #ffffff !default;
 $text-color--gray: #444444 !default;
 
-$bg-color: #68b738 !default;
+$bg-color: #68b738;
 $bg-color-hover: #5eaa2f !default;
 $bg-color--gray: #f2f2f2 !default;
 $bg-color-hover--gray: #ebebeb !default;
@@ -20,6 +21,7 @@ $opacity: 0.3;
   padding: $padding-vertical $padding-horizontal;
 
   font-size: $font-size;
+  line-height: $line-height;
   font-family: inherit;
   vertical-align: top;
   text-align: center;

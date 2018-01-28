@@ -6,5 +6,6 @@
       fill: #3F4242;
     }
   </style>
-  <polygon class="st0" points="17.6,0 24.2,5.5 17.6,11 17.6,6.6 0,6.6 0,4.4 17.6,4.4 "/>
+  <polygon style="transform: scaleX(5)" class="st0" points="17.6,11 17.6,6.6 0,6.6 0,4.4 17.6,4.4 "/>
+  <polygon style="opacity: 0.5;" fill="red" points="17.6,0 24.2,5.5 17.6,11 17.6,6.6" />
 </svg>
