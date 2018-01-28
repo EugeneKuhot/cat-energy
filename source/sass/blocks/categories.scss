@@ -1,0 +1,257 @@
+.categories {
+  margin-bottom: 30px;
+}
+
+.categories__wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.categories__list {
+  margin: auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.categories__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 25px 20px 20px;
+  background-color: #f2f2f2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    width: 50px;
+    height: 50px;
+    background-color: $green;
+    border-radius: 50%;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+  }
+
+  &--slim {
+    &::before {
+      top: 25px;
+      left: 22px;
+    }
+
+    &::after {
+      top: 22px;
+      left: 30px;
+      width: 35px;
+      height: 49px;
+      background-image: url("../img/icon-cat-slim.svg");
+    }
+  }
+
+  &--pro {
+    &::before {
+      top: 24px;
+      left: 22px;
+    }
+
+    &::after {
+      top: 35px;
+      left: 13px;
+      width: 67px;
+      height: 28px;
+      background-image: url("../img/icon-cat-pro.svg");
+    }
+  }
+}
+
+.categories__item-title {
+  margin: 0;
+  margin-bottom: 35px;
+  padding-left: 75px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  color: $color-dark-gray;
+  text-transform: uppercase;
+}
+
+.categories__item-descr {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: $color-gray;
+}
+
+.categories__item-btn {
+  position: relative;
+  display: inline-block;
+  padding-right: 40px;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-dark-gray;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover,
+  &:focus {
+
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .categories {
+    margin-bottom: 50px;
+  }
+
+  .categories__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .categories__item {
+    padding: 75px 55px 60px;
+
+    &::before {
+      left: auto;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim {
+      padding-right: 285px;
+
+      &::before {
+        top: 92px;
+        right: 62px;
+      }
+
+      &::after {
+        top: 80px;
+        right: 92px;
+        left: auto;
+        width: 140px;
+        height: 194px;
+      }
+    }
+
+    &--pro {
+      padding-right: 310px;
+
+      &::before {
+        top: 91px;
+        right: 60px;
+      }
+
+      &::after {
+        top: 135px;
+        right: 28px;
+        left: auto;
+        width: 268px;
+        height: 112px;
+      }
+    }
+  }
+
+  .categories__item-title {
+    margin-bottom: 20px;
+    padding-left: 0;
+
+    font-size: 36px;
+    line-height: 37px;
+  }
+
+  .categories__item-descr {
+    margin-bottom: 55px;
+    padding-bottom: 0;
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .categories__item-btn {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories {
+    margin-bottom: 70px;
+  }
+
+  .categories__wrapper {
+    width: 1300px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .categories__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .categories__item {
+    width: 570px;
+    padding: 80px 55px 55px;
+
+    &::before {
+      top: 47px;
+      left: 52px;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        top: 41px;
+        left: 66px;
+        right: auto;
+        width: 70px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 69px;
+        left: 34px;
+        right: auto;
+        width: 134px;
+        height: 56px;
+      }
+    }
+  }
+
+  .categories__item-title {
+    padding-left: 164px;
+    margin-bottom: 70px;
+  }
+
+  .categories__item-descr {
+    margin-bottom: 35px;
+  }
+}
+
