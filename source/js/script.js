@@ -86,4 +86,3 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   window.initMap = initMap;
 });
-

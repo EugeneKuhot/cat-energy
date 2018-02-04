@@ -36,11 +36,11 @@
   border-collapse: collapse;
   border-spacing: 0;
 
-    tbody {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+  tbody {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .example__result {
@@ -172,9 +172,6 @@
   transform: translateX(0%);
 }
 
-.example__slider-input--before:focus ~ .example__slider-toggles .example__slider-toggle--before {
-}
-
 .example__slider-input--after:checked ~ .example__slides-list {
   transform: translateX(-100%);
 }
@@ -274,6 +271,7 @@
 
   .example__slide {
     position: relative;
+
     &--before {
       z-index: 10;
       display: block;
@@ -374,9 +372,4 @@
       }
     }
   }
-
 }
-
-
-
-

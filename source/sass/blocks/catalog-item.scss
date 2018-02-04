@@ -172,6 +172,10 @@
     left: 50%;
     transform: translate3d(-50%, 0, 1px);
     z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 
     flex-grow: 1;
   }
@@ -198,13 +202,6 @@
       font-size: 16px;
       line-height: 16px;
     }
-  }
-
-  .catalog-item__pic-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
   }
 
   .catalog-item__btn {
