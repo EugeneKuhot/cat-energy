@@ -25,7 +25,7 @@
             </a>
             <button class="main-nav__toggle  burger" data-target-id="main-nav" data-target-class-toggle="main-nav--show" aria-label="Открыть меню"><span></span></button>
           </div>
-          <ul class="main-nav__list  site-list">
+          <ul class="main-nav__list  site-list  site-list--inner">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">Главная</a>
             </li>
@@ -103,25 +103,25 @@
             <h2 class='form__legend'>Дополнительно</h2>
             <ul class="form__fieldset-list">
               <li class="form__field  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="extra-sugar" id="extra-sugar">
+                <input class="field-checkbox__input  visually-hidden" type="checkbox" name="extra-sugar" id="extra-sugar">
                 <label class="field-checkbox__label" for="extra-sugar">Сахарозаменитель</label>
               </li>
               <li class="form__field  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="extra-water" id="extra-water">
+                <input class="field-checkbox__input  visually-hidden" type="checkbox" name="extra-water" id="extra-water">
                 <label class="field-checkbox__label" for="extra-water">Питьевая вода</label>
               </li>
               <li class="form__field  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="extra-milk" id="extra-milk">
+                <input class="field-checkbox__input  visually-hidden" type="checkbox" name="extra-milk" id="extra-milk">
                 <label class="field-checkbox__label" for="extra-milk">Молоко</label>
               </li>
               <li class="form__field  field-checkbox">
-                <input class="field-checkbox__input" type="checkbox" name="extra-vitamins" id="extra-vitamins">
+                <input class="field-checkbox__input  visually-hidden" type="checkbox" name="extra-vitamins" id="extra-vitamins">
                 <label class="field-checkbox__label" for="extra-vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <div class="field-actions">
-            <button class="form__btn  btn">Отправить заявку</button>
+          <div class="form__actions  field-actions">
+            <button class="field-actions__btn  btn">Отправить заявку</button>
             <p class="field-actions__text">* - обязательные поля</p>
           </div>
         </form>
