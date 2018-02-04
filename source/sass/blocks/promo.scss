@@ -1,0 +1,149 @@
+.promo {
+  position: relative;
+  margin-bottom: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    height: 305px;
+    background-color: #64a83b;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+  }
+}
+
+.promo__wrapper {
+  padding: 27px 20px 0 20px;
+}
+
+.promo__title {
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 17px;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.promo__slogan {
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promo__pic {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+
+.promo__btn {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    position: static;
+    margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .promo__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 60px 30px 533px 120px;
+  }
+
+  .promo__inner {
+    position: relative;
+  }
+
+  .promo__title {
+    position: relative;
+    z-index: 20;
+    width: 505px;
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: $color-dark-gray;
+    text-align: left;
+  }
+
+  .promo__slogan {
+    position: relative;
+    z-index: 20;
+    width: auto;
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-dark-gray;
+    text-align: left;
+  }
+
+  .promo__pic {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 10;
+    transform: translate3d(0, -50%, 1px);
+  }
+
+  .promo__btn {
+    position: relative;
+    z-index: 20;
+    width: 245px;
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    margin-bottom: 80px;
+  }
+
+  .promo__wrapper {
+    width: 1300px;
+    padding: 110px 40px 190px 123px;
+  }
+
+  .promo__title {
+    margin-bottom: 40px;
+  }
+
+  .promo__slogan {
+    margin-bottom: 50px;
+  }
+
+  .promo__pic {
+    left: 490px;
+    right: 250px;
+    transform: initial;
+  }
+}

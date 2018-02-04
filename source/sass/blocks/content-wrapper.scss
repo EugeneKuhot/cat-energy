@@ -1,0 +1,20 @@
+@media (min-width: $desktop-width) {
+  .content-wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 52.7%;
+      z-index: -1;
+      height: 696px;
+      background-color: #64a83b;
+      background-image: url("../img/index-background-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center top 0;
+      background-size: 680px 696px;
+    }
+  }
+}

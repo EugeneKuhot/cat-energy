@@ -1,0 +1,92 @@
+.logo {
+  outline: none;
+
+  transition: opacity 0.3s ease;
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: calc(50% + 50.5px);
+  }
+
+  &--footer {
+    display: block;
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.logo[href] {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__icon {
+  display: block;
+  width: 33px;
+  height: 38px;
+}
+
+.logo__title {
+  width: 101px;
+  height: 18px;
+  margin-bottom: 7px;
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    &--header {
+      width: 173px;
+      height: 58px;
+    }
+
+    &--footer {
+      display: block;
+      width: 128px;
+      height: 24px;
+      padding: 0;
+    }
+  }
+
+  .logo__icon {
+    width: 70px;
+    height: 58px;
+    margin-right: 20px;
+  }
+
+  .logo__title {
+    width: 84px;
+    height: 16px;
+    margin-bottom: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    &--header {
+      width: 202px;
+      height: 59px;
+    }
+  }
+
+  .logo__icon {
+    width: 70px;
+    height: 59px;
+    margin-right: 14px;
+  }
+
+  .logo__title {
+    width: 118px;
+    height: 22px;
+    margin-bottom: 15px;
+  }
+}
