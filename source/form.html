@@ -26,14 +26,14 @@
             <button class="main-nav__toggle  burger" data-target-id="main-nav" data-target-class-toggle="main-nav--show" aria-label="Открыть меню"><span></span></button>
           </div>
           <ul class="main-nav__list  site-list">
-            <li class="site-list__item  site-list__item--active">
-              <a class="site-list__link">Главная</a>
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Подбор программы</a>
+            <li class="site-list__item  site-list__item--active">
+              <a class="site-list__link">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -46,61 +46,61 @@
         <p class="form__descr">Заполните анкету и мы подеберем программу питания для вашего кота</p>
         <form action="https://echo.htmlacademy.ru" method="post" autocomplete="on">
           <fieldset class="form__fieldset">
-            <legend class="form__legend">Информация о коте</legend>
+            <h2 class="form__legend  visually-hidden">Информация о коте</h2>
             <ul class="form__fieldset-list">
               <li class="form__field  field-text">
-                <label for="cat-name">Имя:*</label>
-                <input type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
+                <label class="field-text__label" for="cat-name">Имя:*</label>
+                <input class="field-text__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
               </li>
               <li class="form__field  field-text">
                 <label class="field-text__label" for="cat-weight">Вес (кг):*</label>
-                <input type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
+                <input class="field-text__input" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
               </li>
               <li class="form__field  field-text">
-                <label for="cat-age">Возраст (лет):</label>
-                <input type="text" name="cat-age" id="cat-age" placeholder="7">
+                <label class="field-text__label" for="cat-age">Возраст (лет):</label>
+                <input class="field-text__input" type="number" name="cat-age" id="cat-age" placeholder="7">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Цель программы</legend>
+          <fieldset class="form__fieldset  form__fieldset--purpose">
+            <h2 class="form__legend  visually-hidden">Цель программы</h2>
             <ul class="form__fieldset-list">
               <li class="form__field  field-radio">
-                <input class="field-radio__input" type="radio" name="objective" id="losing-weight" value="losing-weight">
+                <input class="field-radio__input  visually-hidden" type="radio" name="objective" id="losing-weight" value="losing-weight" checked>
                 <label class="field-radio__label" for="losing-weight">Похудение</label>
               </li>
               <li class="form__field  field-radio">
-                <input class="field-radio__input" type="radio" name="objective" id="gain-weight" value="gain-weight">
+                <input class="field-radio__input  visually-hidden" type="radio" name="objective" id="gain-weight" value="gain-weight">
                 <label class="field-radio__label" for="gain-weight">Набор массы</label>
               </li>
               <li class="form__field  field-radio">
-                <input class="field-radio__input" type="radio" name="objective" id="need-advice" value="need-advice">
+                <input class="field-radio__input  visually-hidden" type="radio" name="objective" id="need-advice" value="need-advice">
                 <label class="field-radio__label" for="need-advice">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__fieldset">
-            <legend class="form__legend">Контактные данные (владелец кота)</legend>
+            <h2 class="form__legend">Контактные данные (владелец кота)</h2>
             <ul class="form__fieldset-list">
               <li class="form__field  field-text  field-text--email">
                 <label class="field-text__label" for="cat-email">E-mail:*</label>
-                <input type="email" name="cat-email" id="cat-email" placeholder="kuklachev@gmail.com" required>
+                <input class="field-text__input" type="email" name="cat-email" id="cat-email" placeholder="kuklachev@gmail.com" required>
               </li>
               <li class="form__field  field-text  field-text--phone">
                 <label class="field-text__label" for="cat-phone">Телефон:*</label>
-                <input type="tel" name="cat-phone" id="cat-phone" placeholder="8 (960) 900-60-90" required>
+                <input class="field-text__input" type="tel" name="cat-phone" id="cat-phone" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__fieldset">
-            <legend class="form__fieldset  visually-hidden">Комментарий</legend>
+            <h2 class="form__fieldset  visually-hidden">Комментарий</h2>
             <div class="field-text  field-text--textarea">
               <label class='field-text__label' for="comment">Комментарий</label>
               <textarea class="field-text__input" name="comment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
           <fieldset class="form__fieldset">
-            <legend class='form__legend'>Дополнительно</legend>
+            <h2 class='form__legend'>Дополнительно</h2>
             <ul class="form__fieldset-list">
               <li class="form__field  field-checkbox">
                 <input class="field-checkbox__input" type="checkbox" name="extra-sugar" id="extra-sugar">
@@ -121,7 +121,7 @@
             </ul>
           </fieldset>
           <div class="field-actions">
-            <button class="form__btn  btn  btn--gray">Отправить заявку</button>
+            <button class="form__btn  btn">Отправить заявку</button>
             <p class="field-actions__text">* - обязательные поля</p>
           </div>
         </form>

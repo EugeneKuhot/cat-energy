@@ -4,6 +4,27 @@ document.addEventListener('DOMContentLoaded', function () {
   var menuToggle = document.querySelector('.burger');
   var exampleInputRange = document.querySelector('.example__slider-range');
   var catAfterPhoto = document.querySelector('.example__slide--after');
+  var questionnaireForm = document.querySelector('.form form');
+
+  if (questionnaireForm) {
+    var questionnaireInputs = questionnaireForm.querySelectorAll('.field-text__input');
+
+    var formInvalidHandler = function (event) {
+      event.target.classList.add('field-text__input--invalid');
+    };
+
+    var inputChangeHandler = function (event) {
+      if (event.target.validity.valid) {
+        event.target.classList.remove('field-text__input--invalid');
+      };
+    };
+
+    questionnaireForm.addEventListener('invalid', formInvalidHandler, true);
+
+    Array.from(questionnaireInputs).forEach(function (input) {
+      input.addEventListener('change', inputChangeHandler);
+    });
+  };
 
   var showBurgerTarget = function () {
     var targetId = this.dataset.targetId;
@@ -32,48 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
         center: (function () {
           return (window.innerWidth > 1299) ? {lat: 59.938549, lng: 30.320} : {lat: 59.938549, lng: 30.322993};
         }()),
-        zoom: 17,
-        styles: [
-          {
-            'featureType': 'all',
-            'elementType': 'all',
-            'stylers': [
-              {
-                'hue': '#f9f7f2'
-              }
-            ]
-          },
-          {
-            'featureType': 'all',
-            'elementType': 'geometry.fill',
-            'stylers': [
-              {
-                'hue': '#fdf7ef'
-              }
-            ]
-          },
-          {
-            'featureType': 'all',
-            'elementType': 'labels',
-            'stylers': [
-              {
-                'weight': '0.01'
-              },
-              {
-                'hue': '#54a3ad'
-              }
-            ]
-          },
-          {
-            'featureType': 'administrative',
-            'elementType': 'geometry.fill',
-            'stylers': [
-              {
-                'hue': '#fdf7ef'
-              }
-            ]
-          }
-        ]
+        zoom: 17
       });
 
       var marker = new google.maps.Marker({
