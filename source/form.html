@@ -137,7 +137,17 @@
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
           </div>
         </div>
-        <div class="contacts__map"></div>
+        <div class="contacts__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="contacts__map-pic" src="img/bg-map-mobile@1x.png 1x" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда">
+          </picture>
+        </div>
       </section>
       <div class="page-footer__wrapper">
         <a class="page-footer__logo  logo  logo--footer">
