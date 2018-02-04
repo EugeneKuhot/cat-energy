@@ -1,0 +1,265 @@
+.extra {
+  overflow: hidden;
+}
+
+.extra__wrapper {
+  padding-right: 6.25%;
+  padding-left: 6.25%;
+  padding-bottom: 35px;
+}
+
+.extra__title-wrapper {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.extra__title {
+  display: flex;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-dark-gray;
+  background-color: #ffffff;
+
+  &::after {
+    content: "";
+    margin-top: 5px;
+    margin-left: 24px;
+    margin-right: -6.75%;
+    flex-grow: 1;
+    height: 3px;
+    background-color: $green;
+  }
+}
+
+.extra__list {
+  margin: 0;
+  margin-bottom: 39px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.extra__item {
+  padding-top: 10px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.extra__item-title {
+  margin: 0;
+  margin-bottom: 13px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-dark-gray;
+  text-transform: uppercase;
+}
+
+.extra__item-info {
+  width: 100%;
+  margin-bottom: 15px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  td {
+    padding: 0;
+
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-gray;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.extra__item-btn {
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.extra__banner {
+  width: 280px;
+  min-height: 289px;
+  margin: 0 auto;
+  padding: 185px 55px 35px;
+  background-color: #75b94c;
+  background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top 60px, center;
+  background-size: 55px 60px, auto;
+}
+
+.extra__banner-descr {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .extra__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 76px;
+  }
+
+  .extra__title-wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 0;
+      left: 0;
+      z-index: 5;
+      height: 3px;
+      background-color: $green;
+      margin-left: -100vw;
+      margin-right: -100vw;
+    }
+  }
+
+  .extra__title {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding: 0 30px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .extra__list {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .extra__item {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 20px 37px 28px 38px;
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+  }
+
+  .extra__item-title {
+    margin: 0;
+  }
+
+  .extra__list {
+    margin-bottom: 69px;
+  }
+
+  .extra__item-info {
+    width: auto;
+    margin: 0;
+    margin-left: auto;
+
+    td {
+      &:last-child {
+        padding-left: 52px;
+      }
+    }
+  }
+
+  .extra__item-btn {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .extra__banner {
+    width: 100%;
+    min-height: 200px;
+    width: 708px;
+    margin: 0 auto;
+    padding: 75px 125px 50px 423px;
+
+    background-position: left 91px top 65px, auto;
+  }
+
+  .extra__banner-descr {
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra__wrapper {
+    width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 90px;
+  }
+
+  .extra__title {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .extra__list {
+    width: 895px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .extra__item {
+    justify-content: space-between;
+    border-right: none;
+    border-left: none;
+    padding: 15px 0 16px;
+  }
+
+  .extra__item-title {
+    width: 285px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra__item-info {
+    width: 285px;
+    margin-left: 0;
+
+    td {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .extra__item-btn {
+    width: 245px;
+    margin-top: 0;
+  }
+
+  .extra__banner {
+    width: 245px;
+    margin: 0;
+    margin-left: auto;
+    padding: 180px 40px 45px;
+  }
+
+  .extra__banner-descr {
+    text-align: center;
+  }
+}
