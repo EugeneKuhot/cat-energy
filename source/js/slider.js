@@ -17,7 +17,7 @@
     var prevSlideBtnClickHandler = function (event) {
       event.preventDefault();
 
-      if (window.innerWidth > TABLET_WIDTH) {
+      if (window.innerWidth >= TABLET_WIDTH) {
         photoBefore.style.width = "100%";
         sliderToggle.style.left = "0";
       } else {
@@ -33,7 +33,7 @@
     var nextSlideBtnClickHandler = function (event) {
       event.preventDefault();
 
-      if (window.innerWidth > TABLET_WIDTH) {
+      if (window.innerWidth >= TABLET_WIDTH) {
         photoBefore.style.width = "0%";
         sliderToggle.style.left = "100%";
       } else {

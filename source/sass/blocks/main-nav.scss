@@ -64,7 +64,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
+    padding-top: 20px;
   }
 
   .main-nav__menu {
@@ -75,12 +75,16 @@
   }
 
   .main-nav__list {
-    padding-top: 2px;
+    padding-top: 22px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    padding-top: 54px;
+    padding-top: 49px;
+  }
+
+  .main-nav__list {
+    padding-top: 25px;
   }
 }

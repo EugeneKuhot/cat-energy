@@ -47,14 +47,21 @@
 @media (min-width: $tablet-width) {
   .site-list {
     display: flex;
-    justify-content: space-between;
-    width: 440px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 450px;
 
     background-color: transparent;
   }
 
   .site-list__item {
     background-color: transparent;
+    margin-left: 36px;
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
 
     &--active {
       position: relative;
@@ -87,7 +94,7 @@
 
 @media (min-width: $desktop-width) {
   .site-list {
-    width: 478px;
+    width: 600px;
 
     &--inner {
       .site-list__item {
@@ -105,6 +112,8 @@
   }
 
   .site-list__item {
+    margin-left: 35px;
+
     &--active {
       &::before {
         content: "";

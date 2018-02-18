@@ -21,6 +21,7 @@
   text-decoration: none;
 
   transition: opacity 0.3s ease;
+  outline: none;
   -webkit-tap-highlight-color: transparent;
 
   &:hover,
@@ -75,7 +76,7 @@
   }
 
   .page-footer__social {
-    margin-left: 412px;
+    margin-left: 325px;
   }
 
   .page-footer__copyright {

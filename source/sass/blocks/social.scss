@@ -1,18 +1,23 @@
 .social {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0;
-  padding: 22px 82px 21px 73px;
+  padding: 22px 9px 11px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 
   list-style: none;
 }
 
+.social__item {
+  margin: 0 19px 10px;
+}
+
 .social__link {
   display: block;
+  outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -34,9 +39,13 @@
 
 @media (min-width: $tablet-width) {
   .social {
-    width: 124px;
-    padding: 0;
+    width: 300px;
+    padding: 0 20px;
     border: none;
+  }
+
+  .social__item {
+    margin: 0 14px 10px;
   }
 
   .social__link {

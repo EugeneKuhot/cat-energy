@@ -79,6 +79,8 @@
   order: -1;
 
   width: 50%;
+
+  outline: none;
 }
 
 .catalog-item__pic {
@@ -95,6 +97,12 @@
   line-height: 20px;
   color: $color-dark-gray;
   text-transform: uppercase;
+
+  a {
+    color: $color-dark-gray;
+    text-decoration: none;
+    outline: none;
+  }
 }
 
 .catalog-item__info {

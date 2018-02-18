@@ -66,6 +66,7 @@
   .promo {
     position: static;
     margin-bottom: 0;
+    overflow: hidden;
 
     &::before {
       display: none;
@@ -74,7 +75,7 @@
 
   .promo__wrapper {
     position: relative;
-    padding: 58px 30px 533px 15.23%;
+    padding: 54px 30px 533px 15.23%;
   }
 
   .promo__title {
@@ -140,7 +141,7 @@
   .promo__wrapper {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 109px 40px 190px 117px;
+    padding: 104px 40px 190px 117px;
   }
 
   .promo__title {
