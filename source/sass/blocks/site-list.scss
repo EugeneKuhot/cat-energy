@@ -15,7 +15,7 @@
 
 .site-list__link {
   display: block;
-  padding: 23px 20px 20px;
+  padding: 23px 20px 22px;
 
   font-weight: 500;
   font-size: 20px;
@@ -30,6 +30,7 @@
   outline: none;
 
   transition: opacity 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .site-list__link[href] {
@@ -48,6 +49,7 @@
     display: flex;
     justify-content: space-between;
     width: 440px;
+
     background-color: transparent;
   }
 
@@ -62,7 +64,7 @@
       &::before {
         content: "";
         position: absolute;
-        top: calc(100% + 12px);
+        bottom: -10px;
 
         width: 100%;
         height: 2px;
@@ -107,7 +109,7 @@
       &::before {
         content: "";
         position: absolute;
-        top: calc(100% + 12px);
+        top: calc(100% + 9px);
 
         width: 100%;
         height: 2px;

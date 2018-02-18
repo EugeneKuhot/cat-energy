@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 11px 20px 17px;
+  padding: 10px 20px 17px;
 
   border-bottom: 1px solid #e6e6e6;
 }
@@ -68,8 +68,19 @@
   }
 
   .main-nav__menu {
+    display: block;
     padding: 0;
 
     border: none;
+  }
+
+  .main-nav__list {
+    padding-top: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    padding-top: 54px;
   }
 }

@@ -1,6 +1,5 @@
 "use strict";
 
-/* Подключение модулей */
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
@@ -46,12 +45,12 @@ gulp.task("style", function() {
 
 
 gulp.task("scripts", function () {
-  return gulp.src("./source/js/script.js")
-  .pipe(gulp.dest("./build/js"))
-  .pipe(uglify())
-  .pipe(rename("script.min.js"))
-  .pipe(gulp.dest("./build/js"))
-  .pipe(server.stream());
+  return gulp.src("source/js/**/*.js")
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("build/js"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function() {

@@ -1,13 +1,22 @@
+.contacts {
+  background-color: #ffffff;
+
+  &--inner {
+    background-color: #f2f2f2;
+  }
+}
+
 .contacts__inner {
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px 25px;
+  flex-wrap: wrap;
+  padding: 28px 20px 26px;
 }
 
 .contacts__slogan {
-  width: 44.6%;
+  width: 50%;
   margin: 0;
-  margin-right: 5.4%;
+  padding-right: 18px;
 
   font-size: 16px;
   line-height: 20px;
@@ -26,33 +35,40 @@
 }
 
 .contacts__map {
-  position: relative;
   width: 100%;
-  min-height: 352px;
+  min-height: 362px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contacts__inner {
-    width: 768px;
-    margin: 0 auto;
-    padding: 65px 70px 55px;
+    padding: 63px 70px 58px;
   }
 
   .contacts__slogan {
     width: 155px;
+    padding-top: 2px;
+    padding-right: 0;
+
     font-size: 20px;
     line-height: 25px;
   }
 
   .contacts__address {
     width: 160px;
+    padding-right: 3px;
+
     font-size: 16px;
     line-height: 20px;
-    display: flex;
-    flex-direction: column;
+    text-align: right;
 
     span {
-      margin-top: auto;
+      display: block;
+      margin-top: 20px;
     }
   }
 
@@ -64,29 +80,36 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+
+    min-height: 400px;
   }
 
   .contacts__wrapper {
-    width: 1300px;
-    margin: 0 auto;
-    padding: 95px 40px 103px 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+
+    padding: 94px 40px 103px 0;
+    padding-left: calc((100% - 1300px) / 2 + 40px);
   }
 
   .contacts__inner {
-    position: relative;
-    z-index: 20;
     width: 570px;
     margin: 0;
-    padding: 65px 90px 55px 75px;
+    padding: 65px 85px 58px 75px;
+
     background-color: #ffffff;
   }
 
+  .contacts__address {
+    padding-right: 0;
+
+    text-align: left;
+  }
+
   .contacts__map {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 399px;
-    z-index: 10;
+    min-height: 400px;
   }
 }
