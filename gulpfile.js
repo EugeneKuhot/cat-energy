@@ -15,15 +15,14 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var run = require("run-sequence");
 var del = require("del");
-/* POSTHTML (отключен из-за валидатора :[ ) */
-// var posthtml = require("gulp-posthtml");
-// var include = require("posthtml-include");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 
 gulp.task("html", function() {
   return gulp.src("./source/*.html")
-    // .pipe(posthtml([
-    //   include()
-    // ]))
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./build"))
     .pipe(server.stream());
@@ -54,7 +53,7 @@ gulp.task("scripts", function () {
 });
 
 gulp.task("images", function() {
-  return gulp.src("./build/img/**/*.{png,jpg,svg}")
+  return gulp.src("./source/img/**/*")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),

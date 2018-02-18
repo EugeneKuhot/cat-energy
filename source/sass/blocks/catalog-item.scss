@@ -79,6 +79,8 @@
   order: -1;
 
   width: 50%;
+
+  outline: none;
 }
 
 .catalog-item__pic {
@@ -95,6 +97,12 @@
   line-height: 20px;
   color: $color-dark-gray;
   text-transform: uppercase;
+
+  a {
+    color: $color-dark-gray;
+    text-decoration: none;
+    outline: none;
+  }
 }
 
 .catalog-item__info {
@@ -212,10 +220,6 @@
     width: auto;
     min-height: 260px;
     margin: 0 -37px 37px -38px;
-  }
-
-  .catalog-item__pic {
-    width: 324px;
   }
 
   .catalog-item__title {
