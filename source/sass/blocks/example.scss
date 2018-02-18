@@ -1,20 +1,19 @@
 .example {
   background-color: #f2f2f2;
-}
-
-.example__wrapper {
-  position: relative;
-  padding: 30px 0 35px;
+  overflow: hidden;
 }
 
 .example__inner {
+  margin-bottom: 32px;
+  padding-top: 27px;
   padding-right: 20px;
   padding-left: 20px;
 }
 
 .example__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
+
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -24,6 +23,7 @@
 .example__descr {
   margin: 0;
   margin-bottom: 25px;
+
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", sans-serif;
@@ -32,7 +32,6 @@
 
 .example__results-list {
   width: 100%;
-  margin-bottom: 20px;
   border-collapse: collapse;
   border-spacing: 0;
 
@@ -46,168 +45,96 @@
 .example__result {
   &--cell {
     position: relative;
+
     display: flex;
-    width: 124px;
-    padding: 15px 15px 15px;
+    width: 44.28%;
+    margin-bottom: 33px;
+    padding: 12px 15px 16px;
     border: 1px solid #cdcdcd;
+
     border-radius: 3px;
 
     .example__result-name {
       position: absolute;
       left: 50%;
-      transform: translate(-50%);
-      bottom: -15px;
-      width: 87px;
+      bottom: -17px;
+
+      width: 88px;
       padding-right: 15px;
       padding-left: 15px;
+
       font-family: "Arial", sans-serif;
       font-size: 12px;
       line-height: 12px;
       color: $color-gray;
       text-align: center;
       text-transform: lowercase;
+
       background-color: #f2f2f2;
+      transform: translate3d(-50%, 0, 0);
+      will-change: transform;
     }
 
     .example__result-amount {
-      margin: auto;
+      display: flex;
+      justify-content: center;
+      width: 100%;
       font-size: 24px;
       line-height: 24px;
       color: $color-dark-gray;
+      text-align: center;
       text-transform: uppercase;
     }
   }
 
   &--cost {
-    width: 100%;
     display: flex;
-    margin-top: 25px;
+    width: 190px;
+    margin: 0 auto;
 
     .example__result-name,
     .example__result-amount {
+      display: block;
+
       font-size: 14px;
       line-height: 20px;
       color: $color-dark-gray;
       text-transform: uppercase;
     }
-
-    .example__result-name {
-      margin-left: auto;
-    }
-
-    .example__result-amount {
-      margin-right: auto;
-    }
   }
 }
 
 .example__slider {
-  overflow: hidden;
-}
-
-.example__slides-list {
-  display: flex;
-  flex-wrap: nowrap;
-  margin-bottom: 10px;
-  transform: translateX(0%);
-  transition: all 0.3s ease;
-}
-
-.example__slide {
-  width: 100%;
-  flex-shrink: 0;
-  text-align: center;
-
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.example__slider-toggles {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.example__slider-toggle {
-  font-size: 16px;
-  line-height: 20px;
-  color: $color-dark-gray;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  &--before {
-    margin-right: 20px;
-  }
-
-  &--after {
-    margin-left: 20px;
-  }
-}
-
-.example__slider-bar {
-  position: relative;
-  width: 84px;
-  min-height: 14px;
-  padding: 3px 5px;
-  border: 1px solid #cdcdcd;
-  border-radius: 6px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    width: 35px;
-    height: 6px;
-    transform: translate3d(0, -50%, 1px);
-    background-color: $green;
-    border-radius: 6px;
-    transition: left 0.3s ease;
-  }
-}
-
-.example__slider-input--before:checked ~ .example__slides-list {
-  transform: translateX(0%);
-}
-
-.example__slider-input--after:checked ~ .example__slides-list {
-  transform: translateX(-100%);
-}
-
-.example__slider-input--after:checked ~ .example__slider-toggles .example__slider-bar {
-  &::before {
-    left: 41px;
-  }
-}
-
-.example__slider-range {
-  display: none;
+  padding-bottom: 32px;
 }
 
 @media (min-width: $tablet-width) {
   .example {
     margin-bottom: 0;
-    background-color: initial;
-    background-image: linear-gradient(to bottom, #ffffff 570px, #f2f2f2 570px);
+
+    background-color: transparent;
   }
 
   .example__wrapper {
-    width: 768px;
-    margin: 0 auto;
     padding-right: 30px;
     padding-left: 30px;
   }
 
+  .example__inner {
+    padding: 0;
+    margin-bottom: 85px;
+  }
+
   .example__title {
-    margin-bottom: 55px;
+    margin-bottom: 64px;
+
     font-size: 60px;
     line-height: 60px;
   }
 
   .example__descr {
-    margin-bottom: 50px;
+    margin-bottom: 54px;
+
     font-size: 16px;
     line-height: 24px;
   }
@@ -215,24 +142,33 @@
   .example__results-list {
     tbody {
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
     }
   }
 
   .example__result {
     &--cell {
-      width: 162px;
-      margin-right: 40px;
+      width: 22.88%;
+      margin: 0;
+      margin-right: 42px;
+      padding-top: 13px;
+      padding-bottom: 18px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
 
       .example__result-name {
         bottom: -7px;
+
         width: auto;
         padding-right: 8px;
         padding-left: 8px;
+
         font-size: 14px;
         line-height: 14px;
-        background-color: #ffffff;
         white-space: nowrap;
+        background-color: #ffffff;
       }
 
       .example__result-amount {
@@ -242,18 +178,20 @@
     }
 
     &--cost {
-      width: 176px;
-      margin-top: 0;
+      margin: 0;
+      margin-top: 10px;
       margin-left: auto;
       flex-direction: column;
 
       .example__result-name,
       .example__result-amount {
         font-size: 20px;
+        text-align: right;
       }
 
       .example__result-name {
         margin-left: 0;
+        margin-bottom: 7px;
       }
 
       .example__result-amount {
@@ -263,97 +201,67 @@
     }
   }
 
-  .example__slides-list {
-    position: relative;
-    display: block;
-    transform: initial;
-  }
-
-  .example__slide {
-    position: relative;
-
-    &--before {
-      z-index: 10;
-      display: block;
-
-      img {
-        width: 677px;
-        height: 499px;
-      }
-    }
-
-    &--after {
-      z-index: 20;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      width: 0%;
-      overflow: hidden;
-
-      img {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 545px;
-        height: 517px;
-        max-width: 545px;
-      }
-    }
-  }
-
-  .example__slider-input {
-    display: none;
-  }
-
-  .example__slider-bar {
-    display: none;
-  }
-
-  .example__slider-range {
-    display: block;
+  .example__slider {
+    margin-right: -30px;
+    margin-left: -30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .example {
-    background-image: linear-gradient(to bottom, #ffffff 195px, #eaeaea 195px);
+    background-image: linear-gradient(to bottom, #ffffff 190px, transparent 190px), linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+    background-repeat: no-repeat;
+    background-position: bottom, top;
+    background-size: 100%;
   }
 
   .example__wrapper {
     display: flex;
     justify-content: space-between;
-    width: 1300px;
-    padding-right: 30px;
-    padding-left: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   .example__inner {
     width: 435px;
+    padding-top: 55px;
+    margin-bottom: 0;
   }
 
   .example__title {
-    margin-bottom: 140px;
+    margin-bottom: 147px;
   }
 
   .example__descr {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 
   .example__results-list {
+    width: 366px;
+
     tbody {
+      width: 366px;
       justify-content: space-between;
     }
   }
 
   .example__result {
     &--cell {
+      width: 162px;
       margin-right: 0;
+
+      .example__result-name {
+        background-color: #f2f2f2;
+      }
     }
 
     &--cost {
-      margin-top: 50px;
-      width: 176px;
+      margin-top: 60px;
+      padding-right: 37px;
+      width: 100%;
       flex-direction: row;
       margin-left: 0;
 
@@ -368,8 +276,11 @@
 
       .example__result-amount {
         margin-left: auto;
-        margin-right: 0;
       }
     }
+  }
+
+  .example__slider {
+    margin-right: -40px;
   }
 }

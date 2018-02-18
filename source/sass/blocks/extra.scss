@@ -1,11 +1,10 @@
 .extra {
-  overflow: hidden;
+  margin-bottom: 35px;
 }
 
 .extra__wrapper {
-  padding-right: 6.25%;
-  padding-left: 6.25%;
-  padding-bottom: 35px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .extra__title-wrapper {
@@ -14,22 +13,26 @@
 }
 
 .extra__title {
+  width: 100%;
   display: flex;
-  align-items: center;
+  margin: 0;
+  margin-bottom: 34px;
+  padding-left: 20px;
 
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   color: $color-dark-gray;
-  background-color: #ffffff;
 
   &::after {
     content: "";
-    margin-top: 5px;
-    margin-left: 24px;
-    margin-right: -6.75%;
+
     flex-grow: 1;
+    min-width: 20px;
     height: 3px;
+    margin-left: 22px;
+    margin-top: 14px;
+
     background-color: $green;
   }
 }
@@ -43,7 +46,7 @@
 }
 
 .extra__item {
-  padding-top: 10px;
+  padding-top: 14px;
   padding-bottom: 17px;
   border-bottom: 1px solid #cdcdcd;
 
@@ -54,7 +57,7 @@
 
 .extra__item-title {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
   font-weight: 400;
   font-size: 16px;
@@ -79,13 +82,18 @@
     color: $color-gray;
 
     &:last-child {
+      width: 20%;
+
       text-align: right;
+      text-transform: uppercase;
     }
   }
 }
 
 .extra__item-btn {
   width: 100%;
+  padding-bottom: 8px;
+
   font-size: 16px;
   line-height: 20px;
 }
@@ -94,104 +102,124 @@
   width: 280px;
   min-height: 289px;
   margin: 0 auto;
-  padding: 185px 55px 35px;
+  padding: 187px 55px 35px;
+
   background-color: #75b94c;
   background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top 60px, center;
-  background-size: 55px 60px, auto;
+  background-size: 55px 60px, cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .extra__banner-descr {
   margin: 0;
+
   font-size: 16px;
-  line-height: 22px;
+  line-height: 19px;
   font-family: "Arial", sans-serif;
   color: #ffffff;
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
-  .extra__wrapper {
-    width: 768px;
-    margin: 0 auto;
-    padding: 0;
-    padding-bottom: 76px;
+  .extra {
+    margin-bottom: 76px;
   }
 
-  .extra__title-wrapper {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      right: 0;
-      left: 0;
-      z-index: 5;
-      height: 3px;
-      background-color: $green;
-      margin-left: -100vw;
-      margin-right: -100vw;
-    }
+  .extra__wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .extra__title {
-    position: relative;
-    z-index: 10;
-    display: inline-block;
-    padding: 0 30px;
+    margin-bottom: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+
     font-size: 36px;
     line-height: 36px;
 
+    &::before {
+      content: "";
+
+      min-width: 30px;
+      height: 3px;
+      margin-left: -33px;
+      margin-right: 40px;
+      margin-top: 22px;
+
+      background-color: $green;
+    }
+
     &::after {
-      display: none;
+      margin-right: -30px;
+      margin-left: 36px;
+      margin-top: 22px;
     }
   }
 
   .extra__list {
     margin-bottom: 69px;
-    padding-right: 30px;
-    padding-left: 30px;
   }
 
   .extra__item {
     display: flex;
-    align-items: baseline;
     flex-wrap: wrap;
-    padding: 20px 37px 28px 38px;
+    padding: 25px 37px 28px 38px;
     border-right: 1px solid #cdcdcd;
     border-left: 1px solid #cdcdcd;
   }
 
   .extra__item-title {
+    width: 50%;
     margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .extra__item-info {
-    width: auto;
+    width: 50%;
     margin: 0;
+    margin-top: 4px;
     margin-left: auto;
 
     td {
+      width: 220px;
+      font-size: 16px;
+      line-height: 20px;
+
+      &:first-child {
+        text-align: right;
+      }
+
       &:last-child {
-        padding-left: 52px;
+        width: auto;
+        padding-left: 20px;
       }
     }
   }
 
   .extra__item-btn {
-    margin-top: 25px;
     width: 100%;
+    margin-top: 21px;
   }
 
   .extra__banner {
+    width: 100%;
     min-height: 200px;
-    width: 708px;
-    margin: 0 auto;
-    padding: 75px 125px 50px 423px;
+    padding: 72px 120px 50px 59.7%;
 
-    background-position: left 91px top 65px, auto;
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@1x.jpg");
+    background-position: 91px 65px, center;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .extra__banner-descr {
@@ -200,46 +228,69 @@
 }
 
 @media (min-width: $desktop-width) {
+  .extra {
+    margin-bottom: 85px;
+  }
+
   .extra__wrapper {
-    width: 1300px;
     display: flex;
     flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
     padding-right: 40px;
     padding-left: 40px;
-    padding-bottom: 90px;
   }
 
   .extra__title {
-    width: 100%;
-    padding: 0 40px;
+    padding: 0 calc((100% - 1300px) / 2);
+
+    background-image: linear-gradient(to bottom, transparent 22px, #68b738 22px, #68b738 25px, transparent 25px);
+
+    span {
+      padding-right: 40px;
+      padding-left: 40px;
+
+      background-color: #ffffff;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .extra__list {
     width: 895px;
-    padding: 0;
     margin: 0;
   }
 
   .extra__item {
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 16px;
     border-right: none;
     border-left: none;
-    padding: 15px 0 16px;
   }
 
   .extra__item-title {
     width: 285px;
+
     font-size: 20px;
     line-height: 20px;
   }
 
   .extra__item-info {
     width: 285px;
+    margin-top: 7px;
     margin-left: 0;
 
     td {
       font-size: 16px;
       line-height: 20px;
+
+      &:first-child {
+        text-align: left;
+      }
     }
   }
 
@@ -252,7 +303,14 @@
     width: 245px;
     margin: 0;
     margin-left: auto;
-    padding: 180px 40px 45px;
+    padding: 187px 40px 45px;
+
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@1x.jpg");
+    background-position: 96px 65px, center;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   .extra__banner-descr {

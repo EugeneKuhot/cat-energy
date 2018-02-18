@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 24px 82px 22px 73px;
+  padding: 22px 82px 21px 73px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 
@@ -12,6 +13,7 @@
 
 .social__link {
   display: block;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .social__icon {

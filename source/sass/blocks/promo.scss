@@ -1,5 +1,6 @@
 .promo {
   position: relative;
+
   margin-bottom: 22px;
 
   &::before {
@@ -9,7 +10,9 @@
     right: 0;
     left: 0;
     z-index: -1;
+
     height: 305px;
+
     background-color: #64a83b;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
@@ -28,7 +31,7 @@
 .promo__title {
   width: 250px;
   margin: 0 auto;
-  margin-bottom: 17px;
+  margin-bottom: 25px;
 
   font-weight: normal;
   font-size: 36px;
@@ -40,7 +43,7 @@
 .promo__slogan {
   width: 250px;
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 
   font-size: 14px;
   line-height: 14px;
@@ -70,21 +73,17 @@
   }
 
   .promo__wrapper {
-    width: 768px;
-    margin: 0 auto;
-    padding: 60px 30px 533px 120px;
-  }
-
-  .promo__inner {
     position: relative;
+    padding: 58px 30px 533px 15.23%;
   }
 
   .promo__title {
     position: relative;
     z-index: 20;
+
     width: 505px;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 41px;
 
     font-size: 60px;
     line-height: 60px;
@@ -95,9 +94,11 @@
   .promo__slogan {
     position: relative;
     z-index: 20;
+
     width: auto;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 44px;
+
     font-size: 20px;
     line-height: 20px;
     color: $color-dark-gray;
@@ -109,14 +110,22 @@
     bottom: 0;
     left: 50%;
     z-index: 10;
-    transform: translate3d(0, -50%, 1px);
+
+    margin: 0;
+
+    transform: translate3d(-50%, 0, 0);
+    will-change: transform;
   }
 
   .promo__btn {
     position: relative;
     z-index: 20;
+
     width: 245px;
     margin: 0;
+    margin-left: 3px;
+    padding-top: 14px;
+    padding-bottom: 16px;
 
     font-size: 20px;
     line-height: 20px;
@@ -125,25 +134,29 @@
 
 @media (min-width: $desktop-width) {
   .promo {
-    margin-bottom: 80px;
+    margin-bottom: 78px;
   }
 
   .promo__wrapper {
-    width: 1300px;
-    padding: 110px 40px 190px 123px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 109px 40px 190px 117px;
   }
 
   .promo__title {
-    margin-bottom: 40px;
+    margin-bottom: 41px;
+    padding-left: 3px;
   }
 
   .promo__slogan {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
+    padding-left: 3px;
   }
 
   .promo__pic {
     left: 490px;
-    right: 250px;
-    transform: initial;
+    bottom: 57px;
+
+    transform: none;
   }
 }

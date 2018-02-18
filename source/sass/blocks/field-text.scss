@@ -2,40 +2,110 @@
   display: flex;
   align-items: center;
 
+  &--name {
+    .field-text__label {
+      margin-right: 15px;
+    }
+  }
+
+  &--weight {
+    .field-text__label {
+      margin-right: 18px;
+    }
+  }
+
+  &--age {
+    .field-text__label {
+      margin-right: 16px;
+    }
+  }
+
+  &--email {
+    position: relative;
+
+    .field-text__label {
+      margin-right: 12px;
+    }
+
+    .field-text__input {
+      padding-right: 48px;
+
+      background-color: transparent;
+    }
+  }
+
+  &--phone {
+    position: relative;
+
+    .field-text__label {
+      margin-right: 10px;
+    }
+
+    .field-text__input {
+      padding-right: 48px;
+
+      background-color: transparent;
+    }
+  }
+
   &--textarea {
     flex-wrap: wrap;
 
     .field-text__label {
+      margin-right: 0;
+
       font-weight: 400;
-      margin-bottom: 30px;
       font-size: 24px;
       line-height: 24px;
       color: $color-dark-gray;
+      text-transform: capitalize;
     }
 
     .field-text__input {
       width: 100%;
-      margin-left: 0;
       min-height: 150px;
+
       resize: none;
+    }
+  }
+
+  &--invalid {
+    .field-text__input {
+      border-color: #ff8282;
+      box-shadow: inset 0 0 0 1px #ff8282;
+
+      &:hover {
+        border-color: #ff8282;
+      }
+
+      &:focus {
+        border-color: $color-gray;
+      }
+
+      ~ .field-text__icon {
+        fill: #ff8282;
+      }
     }
   }
 }
 
 .field-text__label {
   flex-shrink: 0;
+  margin-right: 15px;
+
   font-size: 16px;
   line-height: 18px;
   color: $color-dark-gray;
   text-transform: uppercase;
   cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 .field-text__input {
   width: 100%;
   min-width: 80px;
-  margin-left: 17px;
-  padding: 14px 15px 15px;
+  padding: 13px 10px 12px 15px;
   border: 1px solid rgba(#cdcdcd, 0.5);
 
   font-size: 16px;
@@ -44,6 +114,7 @@
   background-color: #ffffff;
   color: $color-dark-gray;
   text-transform: uppercase;
+
   appearance: textfield;
   transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 
@@ -54,16 +125,102 @@
   }
 
   &:focus {
-    border-color: #444444;
-    box-shadow: inset 0 0 0 1px #444444;
+    border-color: $color-gray;
+    box-shadow: inset 0 0 0 1px $color-gray;
+
+    ~ .field-text__icon {
+      fill: $green;
+    }
   }
 
   &::placeholder {
     color: $color-gray;
   }
+}
 
-  &--invalid {
-    border-color: #ff8282;
-    box-shadow: inset 0 0 0 1px #ff8282;
+.field-text__icon {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: calc(100% - 32px);
+
+  display: block;
+
+  fill: #222222;
+  transition: fill 0.3s ease;
+  transform: perspective(1px) translateY(-50%) translateZ(0);
+  will-change: transform;
+}
+
+@media (min-width: $tablet-width) {
+  .field-text {
+    &--name {
+      .field-text__label {
+        margin-right: 16px;
+      }
+    }
+
+    &--weight {
+      .field-text__label {
+        margin-right: 20px;
+      }
+    }
+
+    &--age {
+      .field-text__label {
+        margin-right: 17px;
+      }
+    }
+
+    &--email {
+      .field-text__label {
+        margin-right: 20px;
+        padding-left: 3px;
+      }
+
+      .field-text__input {
+        padding-right: 48px;
+      }
+    }
+
+    &--phone {
+      .field-text__label {
+        margin-right: 16px;
+      }
+
+      .field-text__input {
+        padding-right: 48px;
+      }
+    }
+
+    &--textarea {
+      .field-text__label {
+        margin-bottom: 67px;
+
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      .field-text__input {
+        min-height: 174px;
+        padding-top: 15px;
+      }
+    }
+  }
+
+  .field-text__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .field-text__input {
+    padding: 9px 10px 11px 19px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .field-text__icon {
+    left: calc(100% - 38px);
   }
 }

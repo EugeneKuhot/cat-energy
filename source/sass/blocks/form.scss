@@ -1,13 +1,17 @@
-.form__wrapper {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.form {
+  padding-top: 25px;
+  padding-bottom: 33px;
+}
+
+.form__header {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .form__title {
   margin: 0;
-  margin-bottom: 30px;
-  padding-right: 20px;
-  padding-left: 20px;
+  margin-bottom: 35px;
 
   font-weight: 400;
   font-size: 36px;
@@ -17,9 +21,6 @@
 
 .form__descr {
   margin: 0;
-  margin-bottom: 5px;
-  padding-right: 20px;
-  padding-left: 20px;
 
   font-size: 14px;
   line-height: 18px;
@@ -29,26 +30,101 @@
 
 .form__fieldset {
   margin: 0;
-  padding: 0;
-  padding-top: 31px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 28px 20px 0;
   border: none;
+
+  &--info {
+    .form__field {
+      margin-bottom: 14px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 
   &--purpose {
     margin-top: 23px;
-    padding: 21px 20px 22px;
+    padding: 21px 20px 20px;
     border: 1px solid #ededed;
+
+    .form__field {
+      margin-bottom: 13px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--contacts {
+    .form__legend {
+      margin-bottom: 34px;
+
+      &::after {
+        margin-left: 22px;
+      }
+    }
+
+    .form__field {
+      margin-bottom: 14px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--comments {
+    .form__legend {
+      display: flex;
+
+      &::after {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  &--additionally {
+    .form__legend {
+      &::after {
+        margin-left: 25px;
+      }
+    }
+
+    .form__field {
+      margin-bottom: 12px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
 .form__legend {
+  width: 100%;
+  display: flex;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   color: $color-dark-gray;
+
+  &::after {
+    content: "";
+
+    flex-grow: 1;
+    min-width: 20px;
+    height: 3px;
+    margin-right: -20px;
+    margin-left: 20px;
+    margin-top: 15px;
+
+    background-color: $green;
+  }
 }
 
 .form__fieldset-list {
@@ -58,14 +134,270 @@
   list-style: none;
 }
 
-.form__field {
-  margin-bottom: 14px;
+.form__actions {
+  margin-top: 35px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
-  &:last-of-type {
-    margin-bottom: 0;
+@media (min-width: $tablet-width) {
+  .form {
+    padding-top: 58px;
+    padding-bottom: 72px;
+  }
+
+  .form__header {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 1px;
+  }
+
+  .form__title {
+    margin-bottom: 55px;
+    padding: 0;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .form__descr {
+    width: 385px;
+    padding-left: 41px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__fieldset {
+    padding: 65px 30px 0;
+
+    &--info {
+      .form__field {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--purpose {
+      margin: 72px 0 10px 71px;
+      padding: 24px 27px 24px;
+
+      border-right: none;
+
+      .form__fieldset-wrapper {
+        padding: 0;
+      }
+    }
+
+    &--contacts {
+      .form__legend {
+        margin-bottom: 76px;
+
+        &::after {
+          margin-left: 44px;
+        }
+
+        br {
+          display: none;
+        }
+      }
+
+      .form__fieldset-wrapper {
+        padding-right: 35px;
+        padding-left: 38px;
+      }
+
+      .form__field {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--comments {
+      .form__legend {
+        margin-bottom: 76px;
+
+        &::after {
+          margin-left: 41px;
+        }
+      }
+    }
+
+    &--additionally {
+      .form__legend {
+        margin-bottom: 57px;
+
+        &::after {
+          margin-left: 44px;
+        }
+      }
+
+      .form__fieldset-wrapper {
+        padding-right: 40px;
+      }
+
+      .form__fieldset-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .form__field {
+        width: 284px;
+        margin-bottom: 32px;
+
+        &:last-of-type {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+
+  .form__legend {
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+
+      min-width: 30px;
+      height: 3px;
+      margin-left: -30px;
+      margin-right: 40px;
+      margin-top: 22px;
+
+      background-color: $green;
+    }
+
+    &::after {
+      margin-right: -30px;
+      margin-top: 22px;
+    }
+  }
+
+  .form__fieldset-wrapper {
+    padding-right: 37px;
+    padding-left: 41px;
+  }
+
+  .form__actions {
+    margin-top: 22px;
+    padding-right: 71px;
+    padding-left: 71px;
   }
 }
 
-.form__actions {
-  margin-top: 34px;
+@media (min-width: $desktop-width) {
+  .form {
+    padding-top: 75px;
+    padding-bottom: 82px;
+  }
+
+  .form__header {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .form__descr {
+    width: 325px;
+    padding: 0;
+  }
+
+  .form__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 65px 40px 0 41px;
+  }
+
+  .form__fieldset {
+    padding-right: 0;
+    padding-left: 0;
+
+    &--info {
+      width: 570px;
+      padding: 0;
+      margin: 0;
+
+      .form__fieldset-wrapper {
+        padding: 0;
+      }
+    }
+
+    &--purpose {
+      width: 570px;
+      margin: 0;
+      padding-right: 27px;
+      padding-left: 27px;
+      border-right: 1px solid #ededed;
+    }
+
+    &--contacts {
+      padding-top: 69px;
+
+      .form__fieldset-wrapper {
+        padding-right: 40px;
+        padding-left: 40px;
+      }
+
+      .form__fieldset-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .form__field {
+        width: 570px;
+        margin: 0;
+      }
+    }
+
+    &--comments {
+      padding-top: 66px;
+    }
+
+    &--additionally {
+      padding-top: 68px;
+
+      .form__field {
+        width: 245px;
+      }
+    }
+  }
+
+  .form__legend {
+    padding: 0 calc((100% - 1300px) / 2);
+
+    background-image: linear-gradient(to bottom, transparent 22px, #68b738 22px, #68b738 25px, transparent 25px);
+
+    span {
+      padding-right: 40px;
+      padding-left: 40px;
+
+      background-color: #ffffff;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__fieldset-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .form__actions {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 29px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }

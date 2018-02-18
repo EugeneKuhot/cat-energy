@@ -1,14 +1,53 @@
 .field-actions__btn {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .field-actions__text {
-  width: 170px;
+  width: 200px;
   margin: 0 auto;
+  padding-left: 23px;
 
   font-size: 14px;
   line-height: 16px;
   font-family: "Arial", sans-serif;
   color: $color-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .field-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .field-actions__btn {
+    width: 45.2%;
+    margin-right: 9.7%;
+    margin-bottom: 0;
+    padding-top: 14px;
+    padding-bottom: 16px;
+
+    font-size: 20px;
+  }
+
+  .field-actions__text {
+    width: 190px;
+    margin: 0;
+    padding-bottom: 2px;
+    padding-left: 0;
+
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-actions__btn {
+    width: 570px;
+    margin-right: 80px;
+  }
 }
