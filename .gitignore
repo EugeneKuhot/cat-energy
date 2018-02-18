@@ -10,3 +10,14 @@ node_modules/
 npm-debug.*
 source/css/*.css
 Thumbs.db
+source/
+.csscomb.json
+.editorconfig
+.gitattributes
+.stylelintrc
+.travis.yml
+Contributing.md
+gulpfile.js
+package.json
+package-lock.json
+Readme.md
